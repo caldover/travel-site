@@ -569,6 +569,7 @@ a {
 	}
 
 .wrapper {
+	overflow: hidden;
 	padding-left: 18px;
 	padding-right: 18px;
 	max-width: 1236px;
@@ -715,6 +716,10 @@ a {
 		font-weight: 100;
 	}
 
+.headline strong {
+    font-weight: 400;
+  }
+
 .headline--b-margin-small {
 		margin-bottom: .5em;
 	}
@@ -837,10 +842,10 @@ a {
 	}
 
 .row--equal-height-at-medium > div {
-		float: none;
-		display: -webkit-box;
-		display: -ms-flexbox;
-		display: flex;
+			float: none;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
 		}
 
 @media (min-width: 1010px) {
@@ -962,15 +967,13 @@ a {
 	background-color: rgba(255, 255, 255, .8);
 	padding: 0 18px 1px 18px;
 	margin-bottom: 98px;
-
 }
 
 @media (min-width: 1010px) {
 
 .testimonial {
-			margin-bottom: 0;
+		margin-bottom: 0;
 		padding: 0 1.8125rem 1px 1.8125rem
-
 }
 	}
 
@@ -1122,8 +1125,13 @@ Instead edit gulp/templates/sprite */
 @media (min-width: 800px) {
 
 .site-header {
+		position: fixed;
 		background-color: rgba(47,85,114, .3)
 }
+
+		.site-header--dark {
+			background-color: rgba(23, 51, 72, .85);
+		}
 	}
 
 @media (min-width: 800px) {
@@ -1139,6 +1147,10 @@ Instead edit gulp/templates/sprite */
 		left: 50%;
 		-webkit-transform: translateX(-50%) scale(.8);
 		        transform: translateX(-50%) scale(.8);
+		-webkit-transition: -webkit-transform .3s ease-out;
+		transition: -webkit-transform .3s ease-out;
+		transition: transform .3s ease-out;
+		transition: transform .3s ease-out, -webkit-transform .3s ease-out;
 		-webkit-transform-origin: 50% 0;
 		        transform-origin: 50% 0; 
 		background-color: #2f5572;
@@ -1152,6 +1164,11 @@ Instead edit gulp/templates/sprite */
 			-webkit-transform: translateX(0);
 			        transform: translateX(0)
 	}
+
+			.site-header--dark .site-header__logo {
+				-webkit-transform: scale(.57);
+				        transform: scale(.57);
+			}
 	}
 
 .site-header__logo__graphic {
@@ -1338,6 +1355,10 @@ Instead edit gulp/templates/sprite */
 			padding: 12px 0;
 			background-color: transparent
 	}
+
+			.primary-nav a.is-current-link {
+				color: #fabb69;
+			}
 	}
 
 .reveal-item {

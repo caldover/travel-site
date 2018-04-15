@@ -103,8 +103,8 @@
 		}
 
 		& > div {
-		float: none;
-		display: flex;
+			float: none;
+			display: flex;
 		}
 	}
 
